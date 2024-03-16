@@ -17,7 +17,7 @@ function App() {
             <div className="navlink"><Link to="/user">Afficher un Utilisateur</Link></div>
           </div>
         </nav>
-        <div className="content">
+        <div className="page content">
           <Routes>
               <Route path="/" element={<MainPage/>} />
               <Route path="/adduser" element={<AddUserForm />} />
@@ -25,6 +25,11 @@ function App() {
               <Route path="*" element={<Error404 />} />
           </Routes>
           </div>
+          <footer>
+            <div className="page content">
+              <div>© 2024 - Jan BELLON</div>
+            </div>
+          </footer>
        </Router>
     </main>
   );

@@ -1,0 +1,14 @@
+.AddUserForm {
+    text-align: center;
+}
+
+.text-input {
+    margin: 1em auto;
+    width: 60%;
+    max-width: 15em;
+}
+
+.AddUserForm {
+    display: block;
+    gap: 1em;
+}

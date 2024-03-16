@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 
 import axios from 'axios';
-import './AddUserForm.css';
 import '../../css/inputs.css';
+import './AddUserForm.css';
 
 const AddUserForm = () => {
   const [userData, setUserData] = useState({ username: '', email: '', password: ''});
@@ -32,7 +32,7 @@ const AddUserForm = () => {
   };
 
   return (
-    <div>
+    <div className="AddUserForm">
     {successMessage && <div class="success">{successMessage}</div>}
     {errorMessage && <div class="error">{errorMessage}</div>}
     <form onSubmit={handleSubmit}>

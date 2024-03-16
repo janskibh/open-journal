@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json()); // Pour parser les requêtes JSON
 
 app.get('/', (req, res) => {
-  res.send('Bienvenue sur Open Journal !');
+  res.send('Bienvenue sur Open Journal ! les amis');
 });
 
 const PORT = process.env.PORT || 3000;

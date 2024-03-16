@@ -1,5 +1,5 @@
 # Étape de construction
-FROM node:14 as build
+FROM node:20 as build
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run build-fix
 
 # Étape de production
 FROM nginx:stable-alpine

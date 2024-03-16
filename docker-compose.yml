@@ -8,14 +8,16 @@ services:
       - "3000:3000"
     environment:
       - DB_HOST=db
-      - DB_USER=monuser
-      - DB_PASSWORD=monpassword
-      - DB_NAME=madatabase
+      - DB_USER=oj_user
+      - DB_PASSWORD=p49cykAhdqQJSxzm2K358t
+      - DB_NAME=open_journal
     depends_on:
       - db
 
   frontend:
     build: ./frontend
+    volumes:
+      - ./frontend:/app
     ports:
       - "80:80"
     depends_on:
@@ -26,9 +28,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=monuser
-      - POSTGRES_PASSWORD=monpassword
-      - POSTGRES_DB=madatabase
+      - POSTGRES_USER=oj_user
+      - POSTGRES_PASSWORD=p49cykAhdqQJSxzm2K358t
+      - POSTGRES_DB=open_journal
 
 volumes:
   postgres_data:

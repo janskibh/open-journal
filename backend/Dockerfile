@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Définir la commande pour démarrer votre application
-CMD ["node", "index.js"]
+CMD ["node", "run", "dev"]

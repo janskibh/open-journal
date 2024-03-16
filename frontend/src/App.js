@@ -12,10 +12,12 @@ function App() {
     <main>
       <Router>
         <nav>
-        <div className="navlink"><Link to="/">Home</Link></div>
-          <div className="navlink"><Link to="/user">Afficher un Utilisateur</Link></div>
+          <div className="content">
+            <div className="navlink-img"><Link to="/"><img src="/logo192.png" alt="Open Journal"/></Link></div>
+            <div className="navlink"><Link to="/user">Afficher un Utilisateur</Link></div>
+          </div>
         </nav>
-        <div class="content">
+        <div className="content">
           <Routes>
               <Route path="/" element={<MainPage/>} />
               <Route path="/adduser" element={<AddUserForm />} />

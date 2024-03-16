@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import axios from 'axios';
 import './SearchUser.css';
+import '../../css/inputs.css';
 
 const SearchUser = () => {
     const [searchData, setSearchData] = useState("");
@@ -26,9 +27,9 @@ const SearchUser = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="searchbar">
                 <div className="text-input"><input type="text" name="search" value={searchData} onChange={handleChange} placeholder="username" required /></div>
-                <div><button type="submit">Rechercher</button></div>
+                <button type="submit">Rechercher</button>
             </form>
             {/* Afficher searchResult sous forme de tableau ou de liste */}
             {searchResult && (

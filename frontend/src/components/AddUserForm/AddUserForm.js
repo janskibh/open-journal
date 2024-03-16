@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import axios from 'axios';
 import './AddUserForm.css';
+import '../../css/inputs.css';
 
 const AddUserForm = () => {
   const [userData, setUserData] = useState({ username: '', email: '', password: ''});

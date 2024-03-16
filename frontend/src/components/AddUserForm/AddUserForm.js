@@ -1,6 +1,7 @@
 // src/components/AddUserForm.js
 
 import React, { useState } from 'react';
+
 import axios from 'axios';
 import './AddUserForm.css';
 
@@ -19,7 +20,7 @@ const AddUserForm = () => {
     setErrorMessage('');
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:3059/user/newuser', userData);
+      const response = await axios.post('http://10.59.100.59:3059/users/newuser', userData);
 
       console.log(response.data);
       setSuccessMessage("Utilisateur Ajouté");

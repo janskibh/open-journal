@@ -15,7 +15,7 @@ router.get('/:username', async (req, res) => {
     if (result.rows.length > 0) {
       res.json(result.rows[0]);
     } else {
-      res.status(404).send('Utilisateur non trouvé');
+      res.status(404).send('User ' + username + ' not found');
     }
   } catch (error) {
     console.error(error.message);

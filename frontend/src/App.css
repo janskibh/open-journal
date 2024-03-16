@@ -1,50 +1,80 @@
-.App {
+main {
   text-align: center;
+  color: white;
+  background-color: black;
+  min-height: 60em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
   color: white;
 }
 
+div {
+  margin: 1em;
+}
+
+#root {
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  padding: 1em;
+  border-bottom: 1px solid white;
+}
+
+.navlink {
+  vertical-align: center;
+  height: 2em;
+  width: min-content;
+  white-space: nowrap;
+  margin: 0 1em;
+  padding: 0.4em 0.5em 0 0.5em;
+  border-radius: 5em;
+  border: 1px solid white;
+}
+
+.content {
+  max-width: 80%;
+  margin: 5em auto;
+}
+
+.text-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color:  black;
+  width: 20em;
+  border-radius: 5em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid white;
+}
+
+.text-input input {
+  width: 100%;
+  min-width: 5em;
+  height: 2em;
+  font-family: cfont, Arial, sans-serif;
+  border: none;
+  background: none;
+  color: white;
+}
+
+button, .button {
+  background-color:  black;
+  border-radius: 5em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid white;
+  color: white;
+}
 
 input:focus, textarea:focus {
   outline: none;
   display: inline;
-}
-
-
-.text-input {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    background-color:  var(--panel-background);
-    width: 20em;
-    border-radius: 5em;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    border: 1px solid white;
-}
-
-.text-input input {
-    width: 100%;
-    min-width: 5em;
-    height: 2em;
-    font-family: cfont, Arial, sans-serif;
-    border: none;
-    background: none;
-    color: var(--text);
 }
 
 .error {

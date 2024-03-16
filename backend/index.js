@@ -1,11 +1,20 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
+// ROUTES
+
+const userRoutes = require('./routes/users');
 
 app.use(express.json()); // Pour parser les requêtes JSON
+app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Bienvenue sur Open Journal !');
+  res.header("Content-Type", "text/plain");
+  res.send('Open-Journal API\n');
 });
+
+app.use('/users', userRoutes);
 
 const PORT = process.env.PORT || 3059;
 app.listen(PORT, () => {

@@ -33,12 +33,12 @@ const AddUserForm = () => {
 
   return (
     <div className="AddUserForm">
-    {successMessage && <div class="success">{successMessage}</div>}
-    {errorMessage && <div class="error">{errorMessage}</div>}
+    {successMessage && <div className="success">{successMessage}</div>}
+    {errorMessage && <div className="error">{errorMessage}</div>}
     <form onSubmit={handleSubmit}>
-        <div class="text-input"><input type="text" name="username" value={userData.username} onChange={handleChange} placeholder="username" required /></div>
-        <div class="text-input"><input type="email" name="email" value={userData.email} onChange={handleChange} placeholder="email" required /></div>
-        <div class="text-input"><input type="password" name="password" value={userData.password} onChange={handleChange} placeholder="password" required /></div>
+        <div className="text-input"><input type="text" name="username" value={userData.username} onChange={handleChange} placeholder="username" required /></div>
+        <div className="text-input"><input type="email" name="email" value={userData.email} onChange={handleChange} placeholder="email" required /></div>
+        <div className="text-input"><input type="password" name="password" value={userData.password} onChange={handleChange} placeholder="password" required /></div>
         <div><button type="submit">Add user</button></div>
     </form>
     </div>
